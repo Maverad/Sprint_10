@@ -163,8 +163,6 @@ class MainPage(BasePage):
         return self.check_visibility(locator.free_ride_auto_cost)
 
     def check_type_active(self, dest_type):
-        self.choose_type(dest_type)
-        self.wait_for_element(locator.type_result)
         return test_data.destination_types[dest_type] in self.find_element(locator.type_result).text
 
     def check_type_picker_form_presents(self):
